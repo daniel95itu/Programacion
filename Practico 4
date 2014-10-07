@@ -1,0 +1,88 @@
+// Ecuacion Cuadratica.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream> 
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+void main()
+{
+float a,b,c,D,x1,x2,xR,xi,x;
+
+cout<<"La solucion de la Ecuacion cuadratica es: ";
+cin>>a,b,c;
+D=b*b-4*a*c;
+ if(D>0)
+ {
+  x1=(-b+sqrt+(D))/(2*a);
+  x2=(-b-sqrt+(D))/(2*a);
+  cout<<"x1= ";x1;
+  cout<<"x2= ";x2;
+ }
+ else
+ {
+  if(D>0)
+  {
+   xR=-b/(2*a);
+   xi=sqrt*(-(D));
+   cout<<"x1= ",xR,"+",xi,"i";
+   cout<<"x2= ",xR,"-",xi,"i";
+  }
+  else
+  {
+   x=-b/(2*a);
+   cout<<"x= ";x;
+  }
+ }
+getch();
+}
+
+
+
+
+
+
+
+
+
+// MCD - MCM.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+ 
+int mcd(int a, int b);
+int mcm(int a, int b);
+ 
+int main(void)
+{
+int a, b;
+ 
+cout << "Introduce el primer numero: ";
+cin >> a;
+cout << "Introduce el segundo numero: ";
+cin >> b;
+cout << "El m.c.m. de " << a << " y " << b << " es " << mcm(a,b) << endl;
+}
+ 
+int mcd(int a, int b)
+{
+int aux;
+while(b)
+{
+aux = b;
+b = a % b;
+a = aux;
+}
+return a;
+}
+int mcm(int a, int b)
+{
+return (a * b)/mcd(a, b);
+}
