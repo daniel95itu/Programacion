@@ -1,0 +1,17 @@
+// Tabla suma.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+using namespace std;
+
+void main()
+{
+int I,J;
+ for(I=1;I<=10;I++)
+	 for(J=1;J<=10;J++)
+		 cout<<I<<"+"<<J<<"="<<I+J<<endl;
+ getch();
+}
