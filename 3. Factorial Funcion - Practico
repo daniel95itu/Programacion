@@ -1,0 +1,33 @@
+// Factorial funciones - Practico.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+using namespace std;
+
+int FAC(int x);
+
+void main()
+{
+	int dat,z;
+	int j,t;
+	cout<<"Ingrese el numero a repetir: ";
+	cin>>j;
+	for (t=1;t<=j;t++)
+	{
+	 cout<<"\nIngrese el valor del numero: ";
+	 cin>>dat;
+	 z=FAC(dat);
+	 cout<<"El factorial de: "<<dat<<" es: "<<z;
+	}
+	getch();
+}
+int FAC(int x)
+{
+	int m=1;
+	for (int i=1;i<=x;i++)
+		m=m*i;
+	return m;
+}
