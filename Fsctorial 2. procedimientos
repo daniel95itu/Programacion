@@ -1,0 +1,45 @@
+// Factoriall.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+using namespace std;
+
+void factorial(int N,int &f);
+void potencia(float x, int y,float &P);
+
+void main()
+{
+	float base,po,s;
+	int exponente,fa,n;
+	cout<<"Ingrese un numero para calcular factorial: ";
+	cin>>n;
+	cout<<"Ingrese el valor de x: ";
+	cin>>base;
+	s=0;
+	for(int i=2;i<=n;i++)
+	{
+		potencia(base,i,po);
+		factorial(i,fa);
+		s=s+(po/fa);
+	}
+	cout<<"suma: "<<s;
+	getch();
+}
+void factorial(int N,int &f)
+{
+	int i;
+	f=1;
+	for(i=2;i<=N;i++)
+		f=f*i;
+}
+void potencia(float x,int y,float &P)
+{
+	float pot;
+	pot=1;
+	for(int i=1;i<=y;i++)
+		pot=pot*x;
+	P=pot;
+}
